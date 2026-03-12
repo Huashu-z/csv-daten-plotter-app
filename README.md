@@ -20,17 +20,20 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## delivery
 
-To learn more about Next.js, take a look at the following resources:
+Upload csv -> Parase content (data incomplete/ different format possible) -> Clean data and output error message-> Display optional column -> Allow x/y axis selection -> Draw -> Error handling 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## components (UI)
+1. FileUpload: upload csv data
+2. DataPreview: show first few lines of the selected file
+3. AxisSelector: 1 x axe with several y axis, prepare for 4. 2D-Plots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## lib (parseCsv)
+data problem: 
+1. Different delimiter: "," and ";" 
+2. Different decimal formats: "," and "."
+3. Metadate row
+4. NaN
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -26,23 +26,6 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 html,
@@ -52,10 +35,6 @@ body {
   font-family: Arial, sans-serif;
   background: #f7f8fa;
   color: #1f1f1f;
-}
-
-body {
-  min-height: 100vh;
 }
 
 .page {
@@ -70,14 +49,12 @@ body {
 
 .page-header h1 {
   margin: 0 0 12px;
-  font-size: 2rem;
 }
 
 .page-header p {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
   color: #555;
+  line-height: 1.5;
 }
 
 .page-grid {
@@ -95,25 +72,25 @@ body {
 }
 
 section {
-  background: #ffffff;
-  border: 1px solid #e3e6eb;
+  background: white;
+  border: 1px solid #ddd;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-section h2 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-}
-
-section p {
+.raw-preview {
   margin: 0;
-  line-height: 1.5;
-  color: #666;
+  padding: 16px;
+  background: #f3f5f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
 }
 
-input[type="file"] {
-  margin-top: 16px;
+@media (max-width: 900px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,9 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import FileUpload from "../components/FileUpload";
 import AxisSelector from "../components/AxisSelector";
 import DataPreview from "../components/DataPreview";
 import PlotChart from "../components/PlotChart";
 
 export default function HomePage() {
+  const [fileName, setFileName] = useState("");
+  const [rawText, setRawText] = useState("");
+
+  function handleFileLoaded(fileName, rawText) {
+    setFileName(fileName);
+    setRawText(rawText);
+  }
+
   return (
     <main className="page">
       <header className="page-header">
@@ -16,12 +27,12 @@ export default function HomePage() {
 
       <div className="page-grid">
         <div className="left-column">
-          <FileUpload />
+          <FileUpload onFileLoaded={handleFileLoaded} fileName={fileName} />
           <AxisSelector />
         </div>
 
         <div className="right-column">
-          <DataPreview />
+          <DataPreview rawText={rawText} />
           <PlotChart />
         </div>
       </div>

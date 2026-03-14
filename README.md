@@ -1,15 +1,9 @@
 ## Getting Started 
 
-First, run the development server:
+Run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev 
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -45,7 +39,7 @@ Upload CSV file -> Parse content (including incomplete data and different input 
    AxisSelector: 1 X-axis and one + more Y-axis columns
    PlotCanvas: draw chart.
 
-5. **chart**  
+5. **chart file**  
    how to draw each chart
 
 ## lib

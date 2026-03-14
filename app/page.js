@@ -9,7 +9,7 @@ export default function Page() {
         padding: "24px 0",
       }}
     >
-      <h1>Data Viewer</h1>
+      <h1>CSV Daten Plotter App</h1>
       <CsvViewerClient />
     </main>
   );

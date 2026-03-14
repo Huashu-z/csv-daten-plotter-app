@@ -29,11 +29,14 @@ Upload csv -> Parase content (data incomplete/ different format possible) -> Cle
 2. DataPreview: show first few lines of the selected file
 3. AxisSelector: 1 x axe with several y axis, prepare for 4. 2D-Plots
 
-## lib (parseCsv)
-data problem: 
+## lib
+parseCsv (clean and organised data): 
 1. Different delimiter: "," and ";" 
 2. Different decimal formats: "," and "."
 3. Metadate row
 4. NaN
+
+plotData: prepare data for different chart type
+
 
 

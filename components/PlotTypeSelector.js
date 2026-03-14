@@ -1,28 +1,17 @@
+import styles from "./CsvViewer.module.css";
+
 export default function PlotTypeSelector({ plotType, onPlotTypeChange }) {
   const chartTypes = [
     { value: "scatter", label: "Scatter", iconSrc: "/icons/plot_scatter.png" },
     { value: "line", label: "Line", iconSrc: "/icons/plot_line.png" },
     { value: "histogram", label: "Histogram", iconSrc: "/icons/plot_hist.png" },
-    ];
+  ];
 
   return (
-    <div
-      style={{
-        border: "1px solid #e5e7eb",
-        borderRadius: "12px",
-        padding: "16px",
-        marginBottom: "16px",
-      }}
-    >
-      <h3 style={{ marginTop: 0, marginBottom: "12px" }}>Chart Type</h3>
+    <div className={styles.controlCard}>
+      <h3 className={styles.controlTitle}>Chart Type</h3>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "10px",
-        }}
-      >
+      <div className={styles.chartTypeGrid}>
         {chartTypes.map((type) => {
           const isActive = plotType === type.value;
 
@@ -31,35 +20,20 @@ export default function PlotTypeSelector({ plotType, onPlotTypeChange }) {
               key={type.value}
               type="button"
               onClick={() => onPlotTypeChange(type.value)}
-              style={{
-                border: isActive ? "2px solid #2563eb" : "1px solid #d1d5db",
-                backgroundColor: isActive ? "#eff6ff" : "#ffffff",
-                borderRadius: "10px",
-                padding: "14px 10px",
-                cursor: "pointer",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "8px",
-                minHeight: "88px",
-              }}
+              className={`${styles.chartTypeButton} ${
+                isActive ? styles.chartTypeButtonActive : ""
+              }`}
             >
               <img
                 src={type.iconSrc}
                 alt={type.label}
-                style={{
-                    width: "46px",
-                    height: "46px",
-                    objectFit: "contain",
-                }}
+                className={styles.chartTypeIcon}
               />
+
               <span
-                style={{
-                  fontSize: "14px",
-                  fontWeight: isActive ? 600 : 500,
-                  color: "#111827",
-                }}
+                className={`${styles.chartTypeLabel} ${
+                  isActive ? styles.chartTypeLabelActive : ""
+                }`}
               >
                 {type.label}
               </span>

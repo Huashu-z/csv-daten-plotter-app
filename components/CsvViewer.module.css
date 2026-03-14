@@ -1,0 +1,449 @@
+.viewerTopRow {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.uploadColumn {
+  flex: 0 0 calc(20% - 10px);
+}
+
+.previewColumn {
+  flex: 0 0 calc(80% - 10px);
+}
+
+.sectionTitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.fixedHeightCard {
+  min-height: 360px;
+}
+
+.uploadOuter {
+  border: 1px solid #cfdfc5;
+}
+
+.uploadInner {
+  border: 3px dashed #cfdfc5;
+  border-radius: 12px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.uploadText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.uploadButton {
+  margin-top: 14px;
+  background-color: #cfdfc5;
+  color: #101010;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.uploadHint {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.selectedFile {
+  margin-top: 18px;
+  color: #555;
+}
+
+.previewContentRow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.previewTableWrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.previewTableScroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 290px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.previewTable {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 640px;
+  table-layout: auto;
+}
+
+.previewTableHead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f7f7f7;
+}
+
+.previewTh {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+  white-space: nowrap;
+  background-color: #f7f7f7;
+}
+
+.previewTd {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+.warningBox {
+  padding: 12px 14px;
+  border: 1px solid #f3b4b4;
+  border-radius: 10px;
+  background-color: #fff5f5;
+  box-sizing: border-box;
+}
+
+.warningBoxStandalone {
+  margin-bottom: 14px;
+}
+
+.warningSidebar {
+  width: 260px;
+  flex-shrink: 0;
+  max-height: 290px;
+  overflow-y: auto;
+}
+
+.warningTitle {
+  margin: 0 0 8px 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.warningList {
+  margin: 0;
+  padding-left: 18px;
+  color: #dc2626;
+}
+
+.warningItem {
+  line-height: 1.5;
+}
+
+.warningItem:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.previewSummary {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #555;
+}
+
+.plotPanel {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+
+.plotPanelTitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.plotPanelGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.plotSidebar {
+  border-right: 1px solid #e5e7eb;
+  padding-right: 20px;
+}
+
+.plotCanvasArea {
+  min-height: 420px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* plot relevant */
+.controlCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.controlCard + .controlCard {
+  margin-top: 16px;
+}
+
+.controlTitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.mutedText {
+  margin-bottom: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.controlStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.textInput,
+.selectInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.rangeInput {
+  width: 100%;
+  margin: 0 0 8px 0;
+  cursor: pointer;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.chartTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.chartTypeButton {
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 14px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 88px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.chartTypeButtonActive {
+  border: 2px solid #2563eb;
+  background-color: #eff6ff;
+}
+
+.chartTypeIcon {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.chartTypeLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.chartTypeLabelActive {
+  font-weight: 600;
+}
+
+.axisBox {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #ffffff;
+}
+
+.checkboxPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #111827;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.checkboxItemDisabled {
+  color: #9ca3af;
+}
+
+.selectedSummary {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.colorSectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.emptyHint {
+  margin: 0;
+  font-size: 13px;
+  color: #adadad;
+  line-height: 1.5;
+}
+
+.colorList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.colorName {
+  font-size: 14px;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.colorInput {
+  width: 40px;
+  height: 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.plotMessage {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.plotCanvasState {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+  .viewerTopRow {
+    flex-direction: column;
+  }
+
+  .uploadColumn,
+  .previewColumn {
+    flex: 1 1 auto;
+  }
+
+  .previewContentRow {
+    flex-direction: column;
+  }
+
+  .warningSidebar {
+    width: 100%;
+    max-height: none;
+  }
+
+  .plotPanelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .plotSidebar {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+  }
+}

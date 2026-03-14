@@ -48,6 +48,8 @@ export default function PlotScatter({
     );
   }
 
+  const yAxisLabel = yAxes.join(" / ");
+
   return (
     <div className={styles.plotWrapper}>
       <div className={styles.plotWithLegend}>
@@ -84,10 +86,11 @@ export default function PlotScatter({
                   dataKey="y"
                   width={60}
                   label={{
-                    value: "Y values",
+                    value: yAxisLabel,
                     angle: -90,
-                    position: "insideLeft",
+                    position: "insideLeft", 
                     offset: -5,
+                    style: { textAnchor: "middle" },
                   }}
                 />
                 <Tooltip />

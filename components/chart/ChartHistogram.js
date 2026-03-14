@@ -83,6 +83,7 @@ export default function PlotHistogram({
                     angle: -90,
                     position: "insideLeft",
                     offset: -5,
+                    style: { textAnchor: "middle" },
                   }}
                 />
                 <Tooltip />

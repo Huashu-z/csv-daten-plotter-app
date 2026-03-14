@@ -9,7 +9,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
-import styles from "./Plot.module.css";
+import styles from "./Chart.module.css";
 
 const DEFAULT_COLORS = [
   "#0166b1",
